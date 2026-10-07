@@ -1,0 +1,610 @@
+
+:root {
+    --main-color: #003366;
+    --accent-color: #0099cc;
+    --bg-color: #faf6f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    padding: 15px 30px;
+    color: rgb(186, 32, 32);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: rgb(209, 145, 219);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.home-section {
+    text-align: center;
+    background: rgb(202, 220, 189);
+    padding: 60px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.faculty-flex {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.img-box {
+    width: 80px;
+    height: 80px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.student-table th, .student-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.student-table th {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.grid-item {
+    background-color: var(--accent-color);
+    color: white;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-box label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="date"],
+.form-box input[type="tel"],
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-box, .checkbox-box {
+    margin-top: 5px;
+}
+
+.form-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-sub, .btn-res {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-sub {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-res {
+    background-color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .grid-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* Gallery Section Styling */
+#gallery {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+/* About Page Styling */
+.about-hero {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    border-left: 5px solid #2a5298;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.intro-card {
+    text-align: center;
+    border-left: none;
+    border-top: 5px solid #2a5298;
+}
+
+.vision-mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.vision-mission-grid .about-card {
+    margin-bottom: 0;
+    text-align: center;
+    border-left: none;
+    border-top: 5px solid #2a5298;
+}
+
+.vision-mission-grid .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.about-card h2, .about-card h3 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #555;
+    line-height: 1.6;
+}
+/* Special Login Button in Navbar */
+.login-nav-btn {
+    background-color: #1a1a1a;
+    color: #ffffff !important;
+    border: 2px solid #1a1a1a !important;
+    box-shadow: 2px 2px 0px #2563eb;
+    transition: transform 0.1s ease, box-shadow 0.1s ease !important;
+}
+
+.login-nav-btn:hover {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px #1a1a1a !important;
+}
+/* Additional Login Page Elements */
+.system-status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 5px 10px;
+    border: 2px solid #1a1a1a;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.role-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    flex: 1;
+    background: #f9fafb;
+    border: 2px solid #1a1a1a;
+    padding: 8px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    box-shadow: 2px 2px 0px #2563eb;
+}
+
+.login-help {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px dashed #e5e7eb;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #4b5563;
+}
+
+.login-help a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-help a:hover {
+    text-decoration: underline;
+}
+/* 1. Basic Reset & Page Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #eef2f7; /* Soft light gray background */
+    color: #333333;
+}
+
+/* 2. Navigation Bar */
+.navbar {
+    background-color: #1a365d; /* Classic dark blue */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* 3. Center the Card on the Screen */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding: 20px;
+}
+
+/* 4. Login Box Card */
+.login-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow around box */
+    text-align: center;
+}
+
+/* Online Status Badge */
+.system-status {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: #2e7d32;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.login-container h2 {
+    color: #1a365d;
+    margin-bottom: 5px;
+}
+
+.login-container p {
+    color: #777777;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* 5. Student / Faculty Tabs */
+.role-tabs {
+    display: flex;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.role-radio {
+    display: none; /* Hide the little radio circles */
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #555555;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* Highlight the clicked tab */
+#tab-student:checked ~ label[for="tab-student"],
+#tab-faculty:checked ~ label[for="tab-faculty"] {
+    background-color: #ffffff;
+    color: #1a365d;
+    font-weight: bold;
+}
+
+/* Switch between Student and Faculty inputs */
+.login-container:has(#tab-student:checked) .faculty-group {
+    display: none;
+}
+
+.login-container:has(#tab-faculty:checked) .student-group {
+    display: none;
+}
+
+/* 6. Form Fields */
+.login-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #444444;
+    margin-bottom: 6px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Blue outline when typing */
+.input-group input:focus {
+    border-color: #2563eb;
+}
+
+/* 7. Remember Me & Forgot Password */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.login-options label {
+    color: #555555;
+    cursor: pointer;
+}
+
+.forgot-link {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* 8. Sign In Button */
+.login-btn {
+    width: 100%;
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 11px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #2563eb; /* Turns bright blue on hover */
+}

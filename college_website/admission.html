@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+    <!-- Navigation Bar (Keep consistent across pages) -->
+    <nav class="navbar">
+        <div class="logo">GCET Jammu</div>
+        <ul class="nav-links">
+            <li><a href="Gcet_Jammu.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="studentsinfo.html">Students</a></li>
+            <li><a href="photogallery.html">Photo Gallery</a></li>
+            <li><a href="admission.html">Admission Form</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</body>
+<section id="admission">
+        <h2>Student Admission Form</h2>
+        <form class="form-box">
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Email Address:</label>
+            <input type="email" placeholder="Enter email">
+
+            <label>Date of Birth:</label>
+            <input type="date">
+
+            <label>Mobile Number:</label>
+            <input type="tel" placeholder="Enter mobile number">
+
+            <label>Gender:</label>
+            <div class="radio-box">
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+            </div>
+
+            <label>Course:</label>
+            <select>
+                <option>Computer Science</option>
+                <option>Mechanical</option>
+                <option>Civil</option>
+            </select>
+
+            <label>Hobbies:</label>
+            <div class="checkbox-box">
+                <input type="checkbox"> Coding
+                <input type="checkbox"> Reading
+                <input type="checkbox"> Sports
+            </div>
+
+            <label>Address:</label>
+            <textarea rows="3" placeholder="Enter address"></textarea>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn-sub">Submit</button>
+                <button type="reset" class="btn-res">Reset</button>
+            </div>
+        </form>
+    </section>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GCET Jammu</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">GCET Jammu</div>
+        <ul class="nav-links">
+            <li><a href="Gcet_Jammu.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="studentsinfo.html">Students</a></li>
+            <li><a href="photogallery.html">Photo Gallery</a></li>
+            <li><a href="admission.html">Admission Form</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Page Container -->
+    <section class="login-section">
+        <div class="login-container">
+
+            <!-- System Status Notice -->
+            <div class="system-status">
+                <span class="status-dot"></span> Portal Online
+            </div>
+
+            <h2>Portal Login</h2>
+            <p>Access your student or faculty dashboard</p>
+
+            <!-- Role Selector Tabs (Using hidden radios for CSS-only switching) -->
+            <div class="role-tabs">
+                <input type="radio" id="tab-student" name="role-switch" class="role-radio" checked>
+                <label for="tab-student" class="tab-btn">Student</label>
+
+                <input type="radio" id="tab-faculty" name="role-switch" class="role-radio">
+                <label for="tab-faculty" class="tab-btn">Faculty</label>
+            </div>
+
+            <form class="login-form"
+                action="dashboard.html">
+                <!-- Student Input Group -->
+                <div class="input-group student-group">
+                    <label for="email">Institutional Email / ID</label>
+                    <input type="text" id="email" name="email" placeholder="e.g., username@gcetjammu.ac.in" required>
+                </div>
+
+                <!-- Faculty Input Group (Hidden by default via CSS) -->
+                <!-- <div class="input-group faculty-group">
+                    <label for="faculty-email">Faculty ID / Email</label>
+                    <input type="text" id="faculty-email" name="faculty_email"
+                        placeholder="e.g., faculty.name@gcetjammu.ac.in" required>
+                </div> -->
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="login-options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>
